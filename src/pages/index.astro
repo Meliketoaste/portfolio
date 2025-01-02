@@ -10,19 +10,41 @@ import Container from '@/components/Container.astro'
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+<div
+  class="w-full h-screen absolute top-0 -z-10 bottom-0 left-0 right-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px] md:bg-[size:50px_50px] lg:bg-[size:70px_70px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
+>
+</div>
+
+<style>
+  .gradient-overlay {
+    background: radial-gradient(
+        at 00% 00%,
+        rgb(30, 144, 255) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 90% 10%, rgb(251, 126, 80) 0px, transparent 50%);
+  }
+</style>
+<div
+  class="w-full h-screen absolute top-0 -z-10 bottom-0 left-0 right-0 gradient-overlay blur-[100px] opacity-10"
+>
+</div>
+
 <Layout>
-  <h1
-    class="text-lg md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold"
-  >
-    Hi, I'm John Doe
-  </h1>
-  <Card>
-    <Button variant="outline">Hello</Button>
-    <p>Helo World</p>
-    <p>Helo World</p>
-    <p>Helo World</p>
-    <p>Helo World</p>
-  </Card>
+  <Container class="flex flex-col gap-28 mt-12">
+    <h1
+      class="mt-12 text-5xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-bold"
+    >
+      Hi, I'm Emil
+    </h1>
+    <Card>
+      <Button variant="outline">Hello</Button>
+      <p>Helo World</p>
+      <p>Helo World</p>
+      <p>Helo World</p>
+      <p>Helo World</p>
+    </Card>
+  </Container>
   <br />
   <br />
   <br />

@@ -84,7 +84,7 @@ header:not(.scrolled) {
 header.scrolled {
   @apply  border-border;
 
-@apply backdrop-blur-md;
- @apply bg-background/80
+  @apply backdrop-blur-md;
+  @apply bg-background/50
 }
 
