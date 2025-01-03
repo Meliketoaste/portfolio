@@ -1,31 +1,32 @@
 ---
-import '@/styles/globals.css'
 import Header from '@/components/Header.astro'
+
+import '@/styles/globals.css'
 ---
 
-<script is:inline>
-  const getThemePreference = () => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme')
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
-  }
-  const isDark = getThemePreference() === 'dark'
-  document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
-
-  if (typeof localStorage !== 'undefined') {
-    const observer = new MutationObserver(() => {
-      const isDark = document.documentElement.classList.contains('dark')
-      localStorage.setItem('theme', isDark ? 'dark' : 'light')
-    })
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class'],
-    })
-  }
-</script>
+{
+  //<html lang="en">
+  //  <head>
+  //    <Head
+  //      title={`${title} | ${SITE.TITLE}`}
+  //      description={description}
+  //      image={image}
+  //    />
+  //  </head>
+  //  <body>
+  //    <div
+  //      class="box-border flex h-fit min-h-screen flex-col gap-y-6 font-sans antialiased"
+  //    >
+  //      <Header />
+  //      <main class="flex-grow">
+  //        <slot />
+  //      </main>
+  //      <Footer />
+  //    </div>
+  //  </body>
+  //</html>
+  //
+}
 
 <html lang="en">
   <head>
@@ -35,13 +36,38 @@ import Header from '@/components/Header.astro'
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
 
+    <script is:inline>
+      const getThemePreference = () => {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme')
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light'
+      }
+      const isDark = getThemePreference() === 'dark'
+      document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
+
+      if (typeof localStorage !== 'undefined') {
+        const observer = new MutationObserver(() => {
+          const isDark = document.documentElement.classList.contains('dark')
+          localStorage.setItem('theme', isDark ? 'dark' : 'light')
+        })
+        observer.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ['class'],
+        })
+      }
+    </script>
+
     <script is:inline src="/js/scroll.js"></script>
   </head>
+
   <body class="flex-grow">
     <main class="flex-grow">
-      <!--My hero thing-->
-      <Header />
-
       <slot />
     </main>
   </body>

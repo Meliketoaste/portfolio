@@ -1,108 +1,85 @@
 ---
-import Welcome from '../components/Welcome.astro'
-import TwinklingStars from '../components/TwinklingStars.astro'
 import Layout from '../layouts/Layout.astro'
 
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
 import Container from '@/components/Container.astro'
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '@/components/Header.astro'
 ---
 
-<div
-  class="w-full h-screen absolute top-0 -z-10 bottom-0 left-0 right-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px] md:bg-[size:50px_50px] lg:bg-[size:70px_70px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
->
-</div>
-
-<style>
-  .gradient-overlay {
-    background: radial-gradient(
-        at 00% 00%,
-        rgb(30, 144, 255) 0px,
-        transparent 50%
-      ),
-      radial-gradient(at 90% 10%, rgb(251, 126, 80) 0px, transparent 50%);
-  }
-</style>
-<div
-  class="w-full h-screen absolute top-0 -z-10 bottom-0 left-0 right-0 gradient-overlay blur-[100px] opacity-10"
->
-</div>
-
 <Layout>
-  <Container class="flex flex-col gap-28 mt-12">
+  <style>
+    .gradient-overlay {
+      background: radial-gradient(
+          at 00% 00%,
+          rgb(30, 144, 255) 0px,
+          transparent 50%
+        ),
+        radial-gradient(at 90% 10%, rgb(251, 126, 80) 0px, transparent 50%);
+    }
+    .fontie {
+      font-family: 'CalSans';
+    }
+  </style>
+  <div
+    class="w-full h-screen absolute top-0 -z-10 bottom-0 left-0 right-0 gradient-overlay blur-[100px] opacity-10"
+  >
+  </div>
+  <div
+    class="w-full h-screen absolute top-0 -z-10 bottom-0 left-0 right-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px] md:bg-[size:50px_50px] lg:bg-[size:70px_70px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_50%,transparent_100%)]"
+  >
+  </div>
+  <Header />
+  <Container class="flex flex-col py-16 lg:py-20 px-4">
     <h1
-      class="mt-12 text-5xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-bold"
+      class="motion-preset-blur-right fontie mb-4 flex flex-col justify-center gap-1 bg-gradient-to-b from-foreground via-foreground/90 to-foreground/70 to-90% bg-clip-text pb-2 text-4xl font-bold text-transparent sm:text-5xl lg:text-6xl"
     >
-      Hi, I'm Emil
+      Hi, I'm Emil Nordgård<br />
+      Software Developer
     </h1>
-    <Card>
-      <Button variant="outline">Hello</Button>
-      <p>Helo World</p>
-      <p>Helo World</p>
-      <p>Helo World</p>
-      <p>Helo World</p>
-    </Card>
+    {
+      //    <Card>
+      //      <Button variant="outline">Hello</Button>
+      //      <p>Helo World</p>
+      //      <p>Helo World</p>
+      //      <p>Helo World</p>
+      //      <p>Helo World</p>
+      //    </Card>
+      //    }
+    }
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </Container>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
 </Layout>
