@@ -1,5 +1,6 @@
 import plugin from 'tailwindcss/plugin'
 
+import defaultTheme from 'tailwindcss/defaultTheme'
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
 import svgToDataUri from 'mini-svg-data-uri'
 
@@ -9,6 +10,9 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['CalSans', ...defaultTheme.fontFamily.sans],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
