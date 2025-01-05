@@ -2,6 +2,16 @@
 import Header from '@/components/Header.astro'
 
 import '@/styles/globals.css'
+import '@fontsource/inter/400.css'
+import '@fontsource/inter/500.css'
+import '@fontsource/inter/600.css'
+
+import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url'
+import inter500 from '@fontsource/inter/files/inter-latin-500-normal.woff2?url'
+import inter600 from '@fontsource/inter/files/inter-latin-600-normal.woff2?url'
+
+//import '@fontsource/inter/700.css'
+//import '@fontsource/inter/800.css'
 ---
 
 {
@@ -31,10 +41,41 @@ import '@/styles/globals.css'
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+      href={inter400}
+    />
+
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+      href={inter500}
+    />
+
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+      href={inter600}
+    />
+
+    <link
+      rel="preload"
+      href="/fonts/CalSans-SemiBold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
   </head>
 
   <script is:inline>

@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro'
 
 import Container from '@/components/Container.astro'
 import Header from '@/components/Header.astro'
+import Link from '@/components/Link.astro'
+
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 ---
 
 <Layout>
@@ -18,6 +22,11 @@ import Header from '@/components/Header.astro'
     /*.fontie {*/
     /*  font-family: 'CalSans';*/
     /*}*/
+    html {
+      -moz-osx-font-smoothing: grayscale !important;
+      -webkit-font-smoothing: antialiased !important;
+      font-smoothing: antialiased !important;
+    }
   </style>
   <div
     class="gradient-overlay absolute bottom-0 left-0 right-0 top-0 -z-10 h-screen w-full opacity-10 blur-[100px]"
@@ -28,50 +37,37 @@ import Header from '@/components/Header.astro'
   >
   </div>
   <Header />
-  <Container class="flex flex-col px-4 py-16 lg:py-20">
+  <Container class="flex flex-col items-start px-4 py-16 lg:py-20">
     <h1
-      class="fontie motion-preset-blur-right mb-4 flex flex-col justify-center gap-1 bg-gradient-to-b from-foreground via-foreground/90 to-foreground/70 to-90% bg-clip-text pb-2 font-sans text-4xl font-bold text-transparent sm:text-5xl lg:text-6xl"
+      class="fontie mt-20 motion-preset-blur-right mb-2 inline justify-center gap-1 bg-gradient-to-b from-foreground via-foreground/90 to-foreground/60 to-90% bg-clip-text pb-2 font-calsans text-6xl font-bold text-transparent"
+      style="opacity: 1; will-change: transform; transform: none;"
     >
-      Hi, I'm Emil Nordgård<br />
+      {/* I would either add a 10 margin or none */}
+      Hi, I'm <span class="text-orange-400">Emil Nordgård</span><br />
       Software Developer
     </h1>
-    <h2>Hello</h2>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <p class="pr-0 text-muted-foreground md:text-xl lg:pr-96">
+      Passionate developer who loves coding, linux and picking up languages as
+      fast as i can
+      <a class="text-orange-300 underline hover:text-orange-200" href="/about"
+        >More about me</a
+      >.
+    </p>
+
+    <Link
+      href="/about"
+      class={cn(buttonVariants({ variant: 'outline' }), 'my-8')}
+    >
+      About Me
+    </Link>
+    <h2 class="mt-44 pr-0 font-calsans text-xl text-muted-foreground lg:pr-96">
+      Projects:
+    </h2>
+
+    <h1 class="pr-0 font-calsans text-2xl text-foreground lg:pr-96">
+      What I've been working on
+    </h1>
+
     <div
       aria-hidden="true"
       class="pointer-events-none fixed inset-x-0 bottom-0 z-10 h-16 bg-gradient-to-b from-transparent to-[#eee] dark:bg-gradient-to-b dark:from-transparent dark:to-background"

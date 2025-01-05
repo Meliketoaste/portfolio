@@ -11,7 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['CalSans', ...defaultTheme.fontFamily.sans],
+        calsans: ['CalSans', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       borderRadius: {
         lg: 'var(--radius)',

@@ -1,7 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
+
+  @font-face {
+    font-family: 'CalSans';
+    src: url('/fonts/CalSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -27,7 +35,9 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem}
+    --radius: 0.5rem
+  }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -52,14 +62,39 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%}
+    --chart-5: 340 75% 55%
+  }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
+
+
+  /**
+   * Firefox specific rule
+   */
+
+  @-moz-document url-prefix() {
+    /*body {*/
+    /*  text-rendering: optimizeLegibility !important;*/
+    /*  -webkit-font-smoothing: antialiased !important;*/
+    /*  -moz-osx-font-smoothing: grayscale !important;*/
+    /*}*/
+
+    /*html {*/
+    /*  -moz-osx-font-smoothing: grayscale !important;*/
+    /*  -webkit-font-smoothing: antialiased !important;*/
+    /*  font-smoothing: antialiased !important;*/
+    /*}*/
+  }
+
+
   body {
     @apply bg-background text-foreground;
+
+
   }
 }
 
@@ -72,25 +107,17 @@ header {
 
 header:not(.scrolled) {
 
-@apply backdrop-blur-none;
-  @apply  border-transparent;
-  
- @apply bg-background/10
+  @apply backdrop-blur-none;
+  @apply border-transparent;
 
+  @apply bg-background/10
 }
 
 header.scrolled {
-  @apply  border-border;
+  @apply border-border;
 
   @apply backdrop-blur-md;
   @apply bg-background/80
 }
 
 /* Register your custom font family and tell the browser where to find it. */
-@font-face {
-  font-family: 'CalSans';
-  src: url('/fonts/CalSans-SemiBold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
