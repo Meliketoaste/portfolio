@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '@/components/Header.astro'
+
+import { cn } from '@/lib/utils'
+import Container from '@/components/Container.astro'
+
+import Link from '@/components/Link.astro'
+---
+
+<Layout>
+  <style>
+    .gradient-overlay {
+      background: radial-gradient(
+          at 00% 00%,
+          rgb(30, 144, 255) 0px,
+          transparent 50%
+        ),
+        radial-gradient(at 90% 10%, rgb(251, 126, 80) 0px, transparent 50%);
+    }
+    /*.fontie {*/
+    /*  font-family: 'CalSans';*/
+    /*}*/
+    html {
+      -moz-osx-font-smoothing: grayscale !important;
+      -webkit-font-smoothing: antialiased !important;
+      font-smoothing: antialiased !important;
+    }
+  </style>
+  <div
+    class="gradient-overlay absolute bottom-0 left-0 right-0 top-0 -z-10 h-screen w-full opacity-10 blur-[100px]"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-0 right-0 top-0 -z-10 h-screen w-full bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_50%,transparent_100%)] md:bg-[size:50px_50px] lg:bg-[size:70px_70px]"
+  >
+  </div>
+  <Header />
+  <Container class="flex flex-col items-start px-4 py-16 lg:py-20">
+    <h1
+      class="fontie motion-preset-seesaw-sm mb-2 mt-10 sm:mt-20 inline justify-center gap-1 bg-gradient-to-b from-foreground via-foreground/90 to-foreground/60 to-90% bg-clip-text pb-2 font-calsans text-4xl sm:text-5xl font-bold text-transparent"
+      style="opacity: 1; will-change: transform; transform: none;"
+    >
+      Nothing here, Yet
+    </h1>
+    <p class="pr-0 text-muted-foreground md:text-xl lg:pr-96">
+      There is plenty of rabbitholes that I will eventually write about.
+    </p>
+  </Container>
+</Layout>

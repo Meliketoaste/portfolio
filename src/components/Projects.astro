@@ -1,0 +1,14 @@
+---
+import ProjectCard from '@/components/ProjectCard.astro'
+
+const data = {
+  name: 'Luadec',
+  description:
+    'Luadec was a project i made for creating an sort of infrastructure as code famework for lua. Using an combination of Rust for the API and lua for the config file. It was inspired by the likes of NixOS and rebos configuration styles.',
+  tags: ['Framework A', 'Library B', 'Tool C', 'Resource D'],
+  image: 'https://logosear.ch/logos/nixos/index.html',
+  link: 'https://github.com/Meliketoaste/luadec',
+}
+---
+
+<ProjectCard project={data} />
