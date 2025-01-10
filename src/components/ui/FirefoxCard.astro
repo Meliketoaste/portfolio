@@ -1,0 +1,50 @@
+---
+import { Code } from 'astro:components'
+import { Badge } from '@/components/ui/badge'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+
+import { Image } from 'astro:assets'
+---
+
+<Card
+  className="  transition-colors duration-200 hover:bg-secondary/20 w-full p-4 flex flex-col md:flex-row"
+>
+  <div class="flex w-full sm:w-1/2 flex-col">
+    <CardHeader>
+      <CardTitle
+        className="bg-gradient-to-b from-foreground via-foreground/90 to-foreground/70 to-90% bg-clip-text font-calsans text-4xl font-bold text-transparent sm:text-4xl"
+        >MyFirefox</CardTitle
+      >
+      <CardDescription className="text-base text-foreground"
+        >Started from me tinkering, lots of people liked it.</CardDescription
+      >
+    </CardHeader>
+    <CardContent className="text-muted-foreground">
+      <p>
+        Userchrome.css lets you treat the entire firefoxUI as your own personal site. Took inspiration ones out there I enjoyed. Posted to the reddit, Did way better than expected, top of the Subreddit that week with a whopping 50 upvotes. They asked me to open source it, So I did.
+      </p>
+    </CardContent>
+    <CardFooter className="flex flex-col flex-grow items-start">
+      <p class="mb-2">More about it <a href="https://github.com/Meliketoaste/MyFirefox">HERE</a></p>
+
+      <div class="mt-auto flex gap-2">
+        <Badge className="" variant="outline" size="lg"> Nix </Badge>
+        <Badge className="" variant="outline" size="lg"> CSS </Badge>
+      </div>
+    </CardFooter>
+  </div>
+  <div class="sm:w-1/2">
+    <CardContent className="p-0 py-6">
+      <p>
+        testo
+      </p>
+    </CardContent>
+  </div>
+</Card>
