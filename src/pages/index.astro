@@ -35,8 +35,8 @@ import { Icon } from 'astro-icon/components'
   >
   </div>
   <Header />
-  <Container class="flex flex-col items-start px-4 py-16 lg:py-20">
-    <div class="rellax mb-2 mt-10 sm:mt-24" data-rellax-speed="-1">
+  <Container class="h-max flex flex-col items-start px-4 py-16 lg:py-20">
+    <div class="rellax mb-2 mt-10 sm:mt-24" data-rellax-speed="-2">
       <h1
         class="fontie motion-preset-blur-right inline justify-center gap-1 bg-gradient-to-b from-foreground via-foreground/90 to-foreground/60 to-90% bg-clip-text pb-2 font-calsans text-4xl font-bold text-transparent sm:text-6xl"
       >
@@ -51,7 +51,7 @@ import { Icon } from 'astro-icon/components'
         >.
       </p>
     </div>
-    <div class="mt-8 flex flex-row gap-2">
+    <div class="mt-8 flex flex-row gap-2 mb-10">
       <Link
         href="/about"
         class={cn(buttonVariants({ variant: 'outline' }), '')}
@@ -60,21 +60,32 @@ import { Icon } from 'astro-icon/components'
       </Link>
     </div>
 
-    <div class="rellax mt-80 flex flex-col gap-8" data-rellax-speed="5">
-      <h1
-        class="mb-4 pr-0 font-calsans text-4xl text-muted-foreground lg:pr-96"
-      >
-        What I've been working on
-      </h1>
+    <div
+      class="rellax mt-10 flex flex-col gap-8"
+      data-rellax-speed="2"
+      data-rellax-percentage="0.9"
+    >
     </div>
 
-    <div class="rellax flex flex-col gap-8" data-rellax-speed="13">
+    <div
+      class="rellax flex flex-col gap-8"
+      data-rellax-speed="7"
+      data-rellax-percentage="0.5"
+    >
+      <div class="rellax" data-rellax-percentage="0.6" data-rellax-speed="0.5">
+        <h1 class="pr-0 font-calsans text-4xl text-muted-foreground lg:pr-96">
+          What I've been working on
+        </h1>
+      </div>
       <Luadec />
       <Godot />
       <Firefox />
     </div>
-    <br />
-    <br />
+
+    <h1 class="mb-8 pr-0 font-calsans text-4xl text-muted-foreground lg:pr-96">
+      Experience
+    </h1>
+    <Firefox />
   </Container>
 
   <div

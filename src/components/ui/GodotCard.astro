@@ -14,9 +14,9 @@ import { Image } from 'astro:assets'
 ---
 
 <Card
-  className="  transition-colors duration-200 hover:bg-secondary/20 w-full p-4 flex flex-col md:flex-row"
+  className="  transition-colors duration-200 hover:bg-secondary/20 w-full p-4 flex flex-col "
 >
-  <div class="flex w-full sm:w-1/2 flex-col">
+  <div class="flex w-full flex-col">
     <CardHeader>
       <CardTitle
         className="bg-gradient-to-b from-foreground via-foreground/90 to-foreground/70 to-90% bg-clip-text font-calsans text-4xl font-bold text-transparent sm:text-4xl"
@@ -28,12 +28,28 @@ import { Image } from 'astro:assets'
     </CardHeader>
     <CardContent className="text-muted-foreground">
       <p>
-        MechaTonic is a 2D platformer I programmed as part of a school project.
-        It was supposed to be a group effort—but let’s just say, it didn’t feel
-        like one. The real highlight? A slick movement system featuring custom
-        shaping functions and a fresh, momentum-based dash mechanic that’s as
-        satisfying as it is unique.
+        MechaTonic is a 2D platformer I was the programmer in the school
+        project. It was supposed to be a group effort—but let’s just say, I did
+        everything except create the brick sprite. The real highlight? A slick
+        movement system featuring custom shaping functions, a fresh
+        momentum-based dash mechanic that’s as satisfying as it is unique.
       </p>
+    </CardContent>
+
+    <CardContent className="p-4 ">
+      <video
+        autoplay=""
+        muted=""
+        loop=""
+        class="rounded-lg border border-border w-full aspect-video"
+      >
+        <source
+          src="
+https://moxw8yxrku.ufs.sh/f/uoibxQaHzxMGrAONkFHWJ1ZpnfEm78HkU9heAc4d0jBvCi6O
+"
+          type="video/mp4"
+        />
+      </video>
     </CardContent>
     <CardFooter className="flex flex-col flex-grow items-start">
       <p class="mb-2">More about it HERE</p>
@@ -43,8 +59,5 @@ import { Image } from 'astro:assets'
         <Badge className="" variant="outline" size="lg"> Godot </Badge>
       </div>
     </CardFooter>
-  </div>
-  <div class="sm:w-1/2">
-    <CardContent className="p-0 py-6" />
   </div>
 </Card>
