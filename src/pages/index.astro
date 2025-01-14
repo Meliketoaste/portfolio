@@ -21,7 +21,7 @@ import Nordics from '@/components/ui/Nordics.astro'
 import Nordic from '@/components/ui/Nordic.astro'
 import VR from '@/components/ui/VR.astro'
 import Veg from '@/components/ui/Veg.astro'
-import Time from '@/components/ui/time.astro'
+import Labour from '@/components/ui/Labour.astro'
 ---
 
 <Layout>
@@ -96,24 +96,23 @@ import Time from '@/components/ui/time.astro'
     </h1>
 
     <div class="flex gap-8 flex-col">
-      <Time />
       <Nordic />
       <VR />
-      <Veg />
-    </div>
-
-    <div class="flex flex-col gap-8">
-      <Arbeidstilsynet />
-      <Vegvesenet />
-
-      <NTNU />
       <Kantega />
-      <Nordics />
+      <Veg />
+      <Labour />
     </div>
-    <div
-      aria-hidden="true"
-      class="pointer-events-none fixed inset-x-0 bottom-0 z-10 h-16 bg-gradient-to-b from-transparent to-[#eee] dark:bg-gradient-to-b dark:from-transparent dark:to-background"
+
+    <h1
+      class="mb-8a mt-8 pr-0 font-calsans text-4xl text-muted-foreground lg:pr-96"
     >
-    </div>
+      I have a <span class="text-foreground">some</span> skills
+    </h1>
+    <div class=""></div>
   </Container>
+  <div
+    aria-hidden="true"
+    class="pointer-events-none fixed inset-x-0 bottom-0 z-10 h-16 bg-gradient-to-b from-transparent to-[#eee] dark:bg-gradient-to-b dark:from-transparent dark:to-background"
+  >
+  </div>
 </Layout>

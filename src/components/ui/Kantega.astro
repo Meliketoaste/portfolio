@@ -10,34 +10,79 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 
-import logo from '../../assets/Kantega_AS.png'
 import { Image } from 'astro:assets'
+
+import logo from '../../assets/kantega.png'
 ---
 
-<Card
-  className="  transition-colors duration-200 hover:bg-secondary/20 w-full flex flex-row "
+<div
+  class="p-4 group relative grid transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
 >
-  <div class="flex w-full sm:flex-row flex-col">
-    <div class="flex flex-col sm:w-1/2">
-      <CardHeader>
-        <CardTitle
-          className="bg-gradient-to-b from-foreground via-foreground/90 to-foreground/70 to-90% bg-clip-text font-calsans text-4xl font-bold text-transparent "
-          >Kantega</CardTitle
+  <div
+    class="absolute -inset-x-0 -inset-y-0 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-0 lg:block lg:group-hover:bg-secondary/30 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+  >
+  </div><header
+    class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
+    aria-label="2024 to Present"
+  >
+    Nov 2024 — 2 weeks
+  </header>
+  <div class="z-10 sm:col-span-6">
+    <div class="flex gap-2x items-center">
+      <Image
+        class="bg-foreground h-8 w-8 rounded-lg mr-2"
+        src={logo}
+        alt="Logo of Kantega"
+      />
+
+      <h3 class="font-medium leading-snug text-slate-200">
+        <div>
+          <a
+            class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-amber-200 focus-visible:text-amber-200 group/link text-base"
+            href="https://www.klaviyo.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            ><span
+              class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+            ></span><span
+              >Internship ·
+              <span class="inline-block"
+                >Kantega<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                  aria-hidden="true"
+                  ><path
+                    fill-rule="evenodd"
+                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                    clip-rule="evenodd"></path></svg
+                ></span
+              ></span
+            ></a
+          >
+        </div>
+      </h3>
+    </div>
+
+    <p class="mt-2 text-sm leading-normal">
+      Worked on some API Tasks, and tinkered with rasberrypi's. And learnt alot
+      about Kantega SSO.
+    </p><ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+      <li class="mr-1.5 mt-2">
+        <div
+          class="flex items-center rounded-full bg-orange-400/10 px-3 py-1 text-xs font-medium leading-5 text-amber-200"
         >
-
-        <CardDescription className="text-base text-foreground">
-          Nov 2024, 2 Weeks, Type: Placement
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="text-base text-muted-foreground">
-        Worked on some API Tasks, and tinkered with rasberrypi's.
-      </CardContent>
-    </div>
-
-    <div
-      class="bg-foreground rounded-lg p-4 flex sm:w-1/2 justify-end items-center"
-    >
-      <Image class="" src={logo} alt="A bird sitting on a nest of eggs." />
-    </div>
+          JavaScript
+        </div>
+      </li>
+      <li class="mr-1.5 mt-2">
+        <div
+          class="flex items-center rounded-full bg-orange-400/10 px-3 py-1 text-xs font-medium leading-5 text-amber-200"
+        >
+          SolidJS
+        </div>
+      </li>
+    </ul>
   </div>
-</Card>
+</div>
