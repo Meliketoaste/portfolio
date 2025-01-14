@@ -1,0 +1,48 @@
+---
+import { Code } from 'astro:components'
+import { Badge } from '@/components/ui/badge'
+
+import logo from '../../assets/Emblem_of_the_Norwegian_Labour_Inspection_Authority.webp'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+
+import { Image } from 'astro:assets'
+---
+
+<Card
+  className="  transition-colors duration-200 hover:bg-secondary/20 w-full flex flex-row "
+>
+  <div class="flex w-full sm:flex-row flex-col">
+    <div class="flex flex-col">
+      <CardHeader>
+        <CardTitle
+          className="bg-gradient-to-b from-foreground via-foreground/90 to-foreground/70 to-90% bg-clip-text font-calsans text-4xl font-bold text-transparent"
+        >
+          Arbeidstilsynet
+        </CardTitle>
+
+        <CardDescription className="text-base text-foreground">
+          Nov 2023, 2 Weeks, Type: Placement
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="text-base text-muted-foreground">
+        Updated React Components and worked on translation stuff.
+      </CardContent>
+    </div>
+    <!-- <div class="p-4 flex sm:w-1/2 justify-end items-center"> -->
+    <!--   <Image -->
+    <!--     class="size-40" -->
+    <!--     src={logo} -->
+    <!--     alt="A bird sitting on a nest of eggs." -->
+    <!--   /> -->
+    <!-- </div> -->
+
+    <div class="flex w-full sm:flex-row flex-col"></div>
+  </div>
+</Card>

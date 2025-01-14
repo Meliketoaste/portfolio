@@ -1,0 +1,39 @@
+---
+import { Code } from 'astro:components'
+import { Badge } from '@/components/ui/badge'
+
+import logo from '../../assets/NTNU-logo.svg'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+
+import { Image } from 'astro:assets'
+---
+
+<Card
+  className="  transition-colors duration-200 hover:bg-secondary/20 w-full flex flex-row "
+>
+  <div class="flex w-full sm:flex-row flex-col">
+    <div class="flex flex-col">
+      <CardHeader>
+        <CardTitle
+          className="bg-gradient-to-b from-foreground via-foreground/90 to-foreground/70 to-90% bg-clip-text font-calsans text-4xl font-bold text-transparent "
+          >NTNU VR Lab</CardTitle
+        >
+
+        <CardDescription className="text-base text-foreground">
+          Nov, 2024, 1 Week, Type: Placement
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="text-base text-muted-foreground">
+        Did some hardcore debugging for VR4VET in one of their games inside of
+        unity.
+      </CardContent>
+    </div>
+  </div>
+</Card>
