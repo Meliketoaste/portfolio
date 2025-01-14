@@ -16,12 +16,10 @@ import { ClientRouter } from 'astro:transitions'
 ---
 
 <script>
-  import Rellax from '../js/vendor/rellax.min.js'
+  import Rellax from 'rellax'
   const rellax = new Rellax('.rellax')
   document.addEventListener('astro:after-swap', () => {
-    // This runs on first page load and after every navigation.
     const rellax = new Rellax('.rellax')
-    window.scrollTo({ left: 0, top: 0, behavior: 'instant' })
   })
 </script>
 <html lang="en" class="dark" style="color-scheme: dark;">

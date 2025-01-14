@@ -18,6 +18,10 @@ import Kantega from '@/components/ui/Kantega.astro'
 import Vegvesenet from '@/components/ui/Vegvesenet.astro'
 import NTNU from '@/components/ui/NTNU.astro'
 import Nordics from '@/components/ui/Nordics.astro'
+import Nordic from '@/components/ui/Nordic.astro'
+import VR from '@/components/ui/VR.astro'
+import Veg from '@/components/ui/Veg.astro'
+import Time from '@/components/ui/time.astro'
 ---
 
 <Layout>
@@ -91,11 +95,19 @@ import Nordics from '@/components/ui/Nordics.astro'
       Experience
     </h1>
 
+    <div class="flex gap-8 flex-col">
+      <Time />
+      <Nordic />
+      <VR />
+      <Veg />
+    </div>
+
     <div class="flex flex-col gap-8">
       <Arbeidstilsynet />
       <Vegvesenet />
-      <Kantega />
+
       <NTNU />
+      <Kantega />
       <Nordics />
     </div>
     <div
